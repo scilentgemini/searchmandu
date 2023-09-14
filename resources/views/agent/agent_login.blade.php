@@ -55,7 +55,7 @@
                             {{-- Register --}}
                             <div class="tab" id="tab-2">
                                 <div class="inner-box">
-                                    <h4>Register as Agent</h4>
+                                    <h4>Register Agent</h4>
                                     <form action="{{ route('agent.register') }}" method="POST" class="default-form">
                                         @csrf
                                         <div class="form-group">
