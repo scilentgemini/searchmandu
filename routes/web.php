@@ -57,10 +57,7 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
 Route::get('admin/login',[AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class);
 
 
-//Agents Group Middleware
-Route::middleware(['auth', 'role:agent'])->group(function(){
-    Route::get('agent/dashboard',[AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-});
+
 
 
 //Admin Middleware Group for Property Type
@@ -112,3 +109,13 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
 
 //Universal Middleware (Everyone Can Access)
 Route::get('property/details/{id}/{slug}',[IndexController::class, 'PropertyDetails']);
+
+
+
+//Agents Group Middleware
+Route::middleware(['auth', 'role:agent'])->group(function(){
+    Route::get('agent/dashboard',[AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
+});
+
+Route::get('agent/login',[AgentController::class, 'AgentLogin'])->name('agent.login')->middleware(RedirectIfAuthenticated::class);
+Route::post('agent/register',[AgentController::class, 'AgentRegister'])->name('agent.register');

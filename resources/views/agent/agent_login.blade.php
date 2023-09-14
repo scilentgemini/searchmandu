@@ -27,8 +27,8 @@
                     <div class="tabs-box">
                         <div class="tab-btn-box">
                             <ul class="tab-btns tab-buttons centred clearfix">
-                                <li class="tab-btn active-btn" data-tab="#tab-1">Login</li>
-                                <li class="tab-btn" data-tab="#tab-2">Register</li>
+                                <li class="tab-btn active-btn" data-tab="#tab-1">Agent Login</li>
+                                <li class="tab-btn" data-tab="#tab-2">Register as Agent</li>
                             </ul>
                         </div>
                         <div class="tabs-content">
@@ -55,8 +55,8 @@
                             {{-- Register --}}
                             <div class="tab" id="tab-2">
                                 <div class="inner-box">
-                                    <h4>Register Now</h4>
-                                    <form action="{{ route('register') }}" method="POST" class="default-form">
+                                    <h4>Register as Agent</h4>
+                                    <form action="{{ route('agent.register') }}" method="POST" class="default-form">
                                         @csrf
                                         <div class="form-group">
                                             <label>Full Name</label>
@@ -65,6 +65,10 @@
                                         <div class="form-group">
                                             <label>Email address</label>
                                             <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="email" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input id="phone" class="block mt-1 w-full" type="text" name="phone" required autocomplete="phone" >
                                         </div>
                                         <div class="form-group">
                                             <label>Password</label>
