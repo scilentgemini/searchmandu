@@ -114,7 +114,7 @@ Route::get('property/details/{id}/{slug}',[IndexController::class, 'PropertyDeta
 
 //Agents Group Middleware
 Route::middleware(['auth', 'role:agent'])->group(function(){
-    Route::get('agent/logout',[AgentController::class, 'AgentLogut'])->name('agent.logout');
+    Route::get('agent/logout',[AgentController::class, 'AgentLogout'])->name('agent.logout');
     Route::get('agent/dashboard',[AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
     Route::get('agent/profile',[AgentController::class, 'AgentProfile'])->name('agent.profile');
     Route::post('agent/profile/store',[AgentController::class, 'AgentProfileStore'])->name('agent.profile.store');
@@ -125,3 +125,15 @@ Route::middleware(['auth', 'role:agent'])->group(function(){
 
 Route::get('agent/login',[AgentController::class, 'AgentLogin'])->name('agent.login')->middleware(RedirectIfAuthenticated::class);
 Route::post('agent/register',[AgentController::class, 'AgentRegister'])->name('agent.register');
+
+
+
+//controller to show and add agents from admin dashboard
+    Route::controller(AdminController::class)->group(function(){
+        Route::get('all/agent','AllAgent')->name('all.agent');
+        Route::get('add/agent','AddAgent')->name('add.agent');
+        Route::post('store/agent','StoreAgent')->name('store.agent');
+        Route::get('edit/agent/{id}','EditAgent')->name('edit.agent');
+        Route::post('update/agent','UpdateAgent')->name('update.agent');
+        Route::get('delete/agent/{id}','DeleteAgent')->name('delete.agent');
+    });
