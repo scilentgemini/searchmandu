@@ -18,8 +18,6 @@
                     <span class="link-title">Dashboard</span>
                 </a>
             </li>
-
-
             
             <li class="nav-item nav-category">RealEstate</li>
             <li class="nav-item">
@@ -122,15 +120,6 @@
                         </li>
                     </ul>
                 </div>
-            </li>
-
-            <li class="nav-item nav-category">Docs</li>
-            <li class="nav-item">
-                <a href="https://www.nobleui.com/html/documentation/docs.html" target="_blank"
-                    class="nav-link">
-                    <i class="link-icon" data-feather="hash"></i>
-                    <span class="link-title">Documentation</span>
-                </a>
             </li>
         </ul>
     </div>

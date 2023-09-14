@@ -136,4 +136,7 @@ Route::post('agent/register',[AgentController::class, 'AgentRegister'])->name('a
         Route::get('edit/agent/{id}','EditAgent')->name('edit.agent');
         Route::post('update/agent','UpdateAgent')->name('update.agent');
         Route::get('delete/agent/{id}','DeleteAgent')->name('delete.agent');
+        //toggling agent status from admin dashboard
+        Route::get('/changeStatus','changeStatus');
+
     });
