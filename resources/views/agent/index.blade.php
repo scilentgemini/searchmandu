@@ -9,17 +9,17 @@
 
 <div class="page-content">
 
-@if ($status === 'active')
-    <h4>Your account as Agent is <span class="text-success">Active</span></h4>
-@else
-    <h4>Your account as Agent is <span class="text-danger">Inactive</span></h4>
-    <p class="text-muted">Please contact <span class="text-danger">administrator</span> get your acount activated.</p>
-@endif
+
 
     <div class="d-flex justify-content-between align-items-center flex-wrap grid-margin">
-        <div>
-            <h4 class="mb-3 mb-md-0">Welcome to Dashboard</h4>
-        </div>
+
+        @if ($status === 'active')
+            <h4 class="mb-3 mb-md-0">Welcome to Dashboard. Your account as Agent is <span class="text-success">Active</span></h4>
+        @else
+            <h4>Hi there! Your account as Agent is <span class="text-danger">Inactive</span></h4>
+            <p class="text-muted">Please contact <span class="text-danger">administrator</span> get your acount activated.</p>
+        @endif
+
         <div class="d-flex align-items-center flex-wrap text-nowrap">
             <div class="input-group flatpickr wd-200 me-2 mb-2 mb-md-0" id="dashboardDate">
                 <span class="input-group-text input-group-addon bg-transparent border-primary"

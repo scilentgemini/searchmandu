@@ -27,9 +27,18 @@
                     <h3>{{ $property->property_name }}</h3>
                     <div class="author-info clearfix">
                         <div class="author-box pull-left">
-                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg" alt="">
-                            </figure>
-                            <h6>Michael Bean</h6>
+
+                            @if ($item->agent_id == Null)
+                                <figure class="author-thumb"><img src="{{ url('img/no_image.jpg') }}" alt="">
+                                </figure>
+                                <h6>AgentSearchmandu</h6>
+                            @else
+                                <figure class="author-thumb"><img src="{{ !empty($item->user->photo) ? url('upload/agent_images/' . $item->user->photo) : url('img/no_image.jpg') }}" alt="">
+                                </figure>
+                                <h6>{{ $item->user->name }}</h6>
+                            @endif
+
+                            
                         </div>
                         <ul class="rating clearfix pull-left">
                             <li><i class="icon-39"></i></li>

@@ -20,8 +20,7 @@
                     <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img
-                                        src="{{ asset( $item->property_thumbnail ) }}"
+                                <figure class="image"><img src="{{ asset($item->property_thumbnail) }}"
                                         alt="">
                                 </figure>
                                 <div class="batch"><i class="icon-11"></i></div>
@@ -31,20 +30,22 @@
                                 <div class="author-info clearfix">
                                     <div class="author pull-left">
 
-                                        {{-- @if ($item->agent_id == NULL)
+                                        @if ($item->agent_id == null)
+                                            <figure class="author-thumb"><img src="{{ url('img/no_image.jpg') }}"
+                                                    alt="">
+                                            </figure>
+                                            <h6>AgentSearchmandu</h6>
+                                        @else
                                             <figure class="author-thumb"><img
-                                                src="{{ (!empty($profileData->photo)) ? url('upload/agent_images/'.$profileData->photo) : url('img/avatar-1.png') ) }}"
-                                                alt=""></figure>
-                                            <h6>Michael Bean</h6>
-                                        @else --}}
-                                            <figure class="author-thumb"><img
-                                                src="{{ asset( $item->property_thumbnail ) }}"
-                                                alt=""></figure>
-                                            <h6>Michael Bean</h6>
-                                        {{-- @endif --}}
-                                        
+                                                    src="{{ !empty($item->user->photo) ? url('upload/agent_images/' . $item->user->photo) : url('img/no_image.jpg') }}"
+                                                    alt="">
+                                            </figure>
+                                            <h6>{{ $item->user->name }}</h6>
+                                        @endif
+
                                     </div>
-                                    <div class="buy-btn pull-right"><a href="property-details.html">{{ $item->property_status }}</a>
+                                    <div class="buy-btn pull-right"><a
+                                            href="property-details.html">{{ $item->property_status }}</a>
                                     </div>
                                 </div>
                                 <div class="title-text">
@@ -66,8 +67,10 @@
                                     <li><i class="icon-15"></i>{{ $item->bathrooms }} Baths</li>
                                     <li><i class="icon-16"></i>{{ $item->property_size }} Sq.Ft</li>
                                 </ul>
-                                <div class="btn-box"><a href="{{ url('property/details/'.$item->id.'/'.$item->property_slug) }}" class="theme-btn btn-two">
-                                    See Details</a></div>
+                                <div class="btn-box"><a
+                                        href="{{ url('property/details/' . $item->id . '/' . $item->property_slug) }}"
+                                        class="theme-btn btn-two">
+                                        See Details</a></div>
                             </div>
                         </div>
                     </div>

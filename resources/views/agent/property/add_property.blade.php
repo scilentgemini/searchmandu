@@ -1,5 +1,5 @@
-@extends('admin.admin_dashboard')
-@section('admin')
+@extends('agent.agent_dashboard')
+@section('agent')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <div class="page-content">
@@ -12,7 +12,7 @@
                         <div class="card-body">
                             <h6 class="card-title">Add Property</h6>
 
-                            <form method="post" action="{{ route('store.property') }}" id="myForm" enctype="multipart/form-data">
+                            <form method="post" action="{{ route('agent.store.property') }}" id="myForm" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -191,17 +191,6 @@
                                                     </option>
                                                 @endforeach
 
-                                            </select>
-                                        </div>
-                                    </div><!-- Col -->
-                                    <div class="col-sm-4">
-                                        <div class="mb-3">
-                                            <label class="form-label">Agent</label>
-                                            <select name="agent_id" class="form-select" id="exampleFormControlSelect1">
-                                                <option selected="" disabled="">Select Agent</option>
-                                                @foreach ($activeAgent as $aAgent)
-                                                    <option value="{{ $aAgent->id }}">{{ $aAgent->name }}</option>
-                                                @endforeach
                                             </select>
                                         </div>
                                     </div><!-- Col -->

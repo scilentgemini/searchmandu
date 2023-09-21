@@ -9,6 +9,8 @@ use App\Http\Controllers\Backend\PropertyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Agent\AgentPropertyController;
+
 
 
 /*
@@ -140,3 +142,25 @@ Route::post('agent/register',[AgentController::class, 'AgentRegister'])->name('a
         Route::get('/changeStatus','changeStatus');
 
     });
+
+
+
+//Agents Group Middleware for Agent Dahboard
+Route::middleware(['auth', 'role:agent'])->group(function(){
+    //group controller for agent to add property
+    Route::controller(AgentPropertyController::class)->group(function(){
+        Route::get('agent/all/property','AgentAllProperty')->name('agent.all.property');
+        Route::get('agent/add/property','AgentAddProperty')->name('agent.add.property');
+        Route::post('agent/store/property','AgentStoreProperty')->name('agent.store.property');
+        Route::get('agent/edit/property/{id}','AgentEditProperty')->name('agent.edit.property');
+        Route::post('agent/update/property','AgentUpdateProperty')->name('agent.update.property');
+        Route::post('agent/update/property/thumbnail','AgentUpdatePropertyThumbnail')->name('agent.update.property.thumbnail');
+        Route::post('agent/update/property/multiimage','AgentUpdatePropertyMultiimage')->name('agent.update.property.multiimage');
+        Route::get('/agent/property/multiimg/delete/{id}', 'AgentPropertyMultiimgDelete')->name('agent.property.multiimage.delete'); 
+        Route::post('agent/store/new/multiimage','AgentStoreNewMultiimage')->name('agent.store.new.multiimage');
+        Route::post('agent/update/property/facilities','AgentUpdatePropertyFacilities')->name('agent.update.property.facilities');
+        
+        Route::get('agent/details/property/{id}','AgentDetailsProperty')->name('agent.details.property');
+        Route::get('agent/delete/property/{id}','AgentDeleteProperty')->name('agent.delete.property');
+    });
+});
