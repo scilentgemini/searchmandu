@@ -8,8 +8,8 @@
                             <h3>About</h3>
                         </div>
                         <div class="text">
-                            <p>Lorem ipsum dolor amet consetetur adi pisicing elit sed eiusm tempor in cididunt ut labore dolore magna aliqua enim ad minim venitam</p>
-                            <p>Quis nostrud exercita laboris nisi ut aliquip commodo.</p>
+                            <p>Searchmandu is your trusted online real estate platform, connecting you with a world of properties and professional agents. Discover your dream home or find expert guidance in property transactions.</p>
+                            <p>Your journey to the perfect property starts here.</p>
                         </div>
                     </div>
                 </div>
@@ -39,12 +39,12 @@
                             <div class="post">
                                 <figure class="post-thumb"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/resource/footer-post-1.jpg') }}" alt=""></a></figure>
                                 <h5><a href="blog-details.html">The Added Value Social Worker</a></h5>
-                                <p>Mar 25, 2020</p>
+                                <p>Mar 25, 2023</p>
                             </div>
                             <div class="post">
                                 <figure class="post-thumb"><a href="blog-details.html"><img src="{{ asset('frontend/assets/images/resource/footer-post-2.jpg') }}" alt=""></a></figure>
                                 <h5><a href="blog-details.html">Ways to Increase Trust</a></h5>
-                                <p>Mar 24, 2020</p>
+                                <p>Mar 24, 2023</p>
                             </div>
                         </div>
                     </div>
@@ -56,9 +56,9 @@
                         </div>
                         <div class="widget-content">
                             <ul class="info-list clearfix">
-                                <li><i class="fas fa-map-marker-alt"></i>Flat 20, Reynolds Neck, North Helenaville, FV77 8WS</li>
-                                <li><i class="fas fa-microphone"></i><a href="tel:23055873407">+2(305) 587-3407</a></li>
-                                <li><i class="fas fa-envelope"></i><a href="mailto:info@example.com">info@example.com</a></li>
+                                <li><i class="fas fa-map-marker-alt"></i>Godawari - 14, Lalitpur</li>
+                                <li><i class="fas fa-microphone"></i><a href="tel:23055873407">+977 9803507666</a></li>
+                                <li><i class="fas fa-envelope"></i><a href="mailto:info@example.com">chitthi@searchmandu.com</a></li>
                             </ul>
                         </div>
                     </div>

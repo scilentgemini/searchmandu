@@ -11,11 +11,11 @@
             </div>
             <div class="right-column pull-right">
                 <ul class="social-links clearfix">
-                    <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="index.html"><i class="fab fa-vimeo-v"></i></a></li>
+                    <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="/"><i class="fab fa-pinterest-p"></i></a></li>
+                    <li><a href="/"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="/"><i class="fab fa-vimeo-v"></i></a></li>
                 </ul>
 
                 @auth
@@ -52,9 +52,9 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="index.html"><span>Home</span></a>
+                                <li class="current dropdown"><a href="/"><span>Home</span></a>
                                     <ul>
-                                        <li><a href="index.html">Main Home</a></li>
+                                        <li><a href="/">Main Home</a></li>
                                         <li><a href="index-2.html">Home Modern</a></li>
                                         <li><a href="index-3.html">Home Map</a></li>
                                         <li><a href="index-4.html">Home Half Map</a></li>
@@ -123,7 +123,7 @@
         <div class="outer-box">
             <div class="main-box">
                 <div class="logo-box">
-                    <figure class="logo"><a href="index.html"><img
+                    <figure class="logo"><a href="/"><img
                                 src="{{ asset('frontend/assets/images/logo.png') }}" alt=""></a></figure>
                 </div>
                 <div class="menu-area clearfix">
@@ -132,7 +132,7 @@
                     </nav>
                 </div>
                 <div class="btn-box">
-                    <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
+                    <a href="/" class="theme-btn btn-one"><span>+</span>Add Listing</a>
                 </div>
             </div>
         </div>

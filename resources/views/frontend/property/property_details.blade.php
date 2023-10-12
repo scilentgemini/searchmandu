@@ -3,8 +3,10 @@
     <!--Page Title-->
     <section class="page-title-two bg-color-1 centred">
         <div class="pattern-layer">
-            <div class="pattern-1" style="background-image: url({{asset('frontend/assets/images/shape/shape-9.png')}});"></div>
-            <div class="pattern-2" style="background-image: url({{asset('frontend/assets/images/shape/shape-10.png')}});"></div>
+            <div class="pattern-1" style="background-image: url({{ asset('frontend/assets/images/shape/shape-9.png') }});">
+            </div>
+            <div class="pattern-2" style="background-image: url({{ asset('frontend/assets/images/shape/shape-10.png') }});">
+            </div>
         </div>
         <div class="auto-container">
             <div class="content-box clearfix">
@@ -28,17 +30,19 @@
                     <div class="author-info clearfix">
                         <div class="author-box pull-left">
 
-                            @if ($item->agent_id == Null)
+                            @if ($property->agent_id == null)
                                 <figure class="author-thumb"><img src="{{ url('img/no_image.jpg') }}" alt="">
                                 </figure>
                                 <h6>AgentSearchmandu</h6>
                             @else
-                                <figure class="author-thumb"><img src="{{ !empty($item->user->photo) ? url('upload/agent_images/' . $item->user->photo) : url('img/no_image.jpg') }}" alt="">
+                                <figure class="author-thumb"><img
+                                        src="{{ !empty($property->user->photo) ? url('upload/agent_images/' . $property->user->photo) : url('img/no_image.jpg') }}"
+                                        alt="">
                                 </figure>
-                                <h6>{{ $item->user->name }}</h6>
+                                <h6>{{ $property->user->name }}</h6>
                             @endif
 
-                            
+
                         </div>
                         <ul class="rating clearfix pull-left">
                             <li><i class="icon-39"></i></li>
@@ -72,9 +76,9 @@
                     <div class="property-details-content">
                         <div class="carousel-inner">
                             <div class="single-item-carousel owl-carousel owl-theme owl-dots-none">
-                                @foreach( $multiImage as $img )
-                                <figure class="image-box">
-                                    <img src="{{ asset($img->photo_name) }}" alt="">
+                                @foreach ($multiImage as $img)
+                                    <figure class="image-box">
+                                        <img src="{{ asset($img->photo_name) }}" alt="">
                                     </figure>
                                 @endforeach
                             </div>
@@ -107,7 +111,7 @@
                                 <h4>Amenities</h4>
                             </div>
                             <ul class="list clearfix">
-                                @foreach ( $property_amen as $amen )
+                                @foreach ($property_amen as $amen)
                                     <li>{{ $amen }}</li>
                                 @endforeach
                             </ul>
@@ -179,13 +183,11 @@
                                 <li><span>City:</span> {{ $property->city }}</li>
                             </ul>
                             <div class="google-map-area">
-                                <div class="google-map" id="contact-google-map"
-                                    data-map-lat="{{ $property->latitude }}"
-                                        data-map-lng="{{ $property->longtitude }}"
-                                        data-icon-path="{{ asset('frontend/assets/images/icons/map-marker.png') }}"
-                                        data-map-title="Brooklyn, New York, United Kingdom"
-                                        data-map-zoom="12"
-                                        data-markers='{
+                                <div class="google-map" id="contact-google-map" data-map-lat="{{ $property->latitude }}"
+                                    data-map-lng="{{ $property->longtitude }}"
+                                    data-icon-path="{{ asset('frontend/assets/images/icons/map-marker.png') }}"
+                                    data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom="12"
+                                    data-markers='{
                                                 "marker-1": [40.712776, -74.005974,
                                                 "<h4>Branch Office</h4>
                                                 <p>77/99 New York</p>",
@@ -205,21 +207,22 @@
                                     <div class="inner">
                                         <h5>Get Easy Access To:</h5>
 
-                                        @foreach ( $facility as $item )
+                                        @foreach ($facility as $item)
                                             <div class="box clearfix">
-                                            <div class="text pull-left">
-                                                <h6>{{ $item->facility_name }} <span>({{ $item->distance }} km)</span></h6>
+                                                <div class="text pull-left">
+                                                    <h6>{{ $item->facility_name }} <span>({{ $item->distance }} km)</span>
+                                                    </h6>
+                                                </div>
+                                                <ul class="rating pull-right clearfix">
+                                                    <li><i class="icon-39"></i></li>
+                                                    <li><i class="icon-39"></i></li>
+                                                    <li><i class="icon-39"></i></li>
+                                                    <li><i class="icon-39"></i></li>
+                                                    <li><i class="icon-40"></i></li>
+                                                </ul>
                                             </div>
-                                            <ul class="rating pull-right clearfix">
-                                                <li><i class="icon-39"></i></li>
-                                                <li><i class="icon-39"></i></li>
-                                                <li><i class="icon-39"></i></li>
-                                                <li><i class="icon-39"></i></li>
-                                                <li><i class="icon-40"></i></li>
-                                            </ul>
-                                        </div>
                                         @endforeach
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -230,13 +233,15 @@
                             </div>
                             <figure class="image-box">
                                 <iframe width="700" height="400" src="{{ $property->property_video }}"
-                                title="Property Video Player" frameborder="0" allow="accelerometer;
+                                    title="Property Video Player" frameborder="0"
+                                    allow="accelerometer;
                                 autoplay;
                                 clipboard-write;
                                 encrypted-media;
                                 gyroscope;
                                 picture-in-picture;
-                                web-share" allowfullscreen>
+                                web-share"
+                                    allowfullscreen>
                                 </iframe>
                             </figure>
                         </div>
@@ -298,17 +303,34 @@
                     <div class="property-sidebar default-sidebar">
                         <div class="author-widget sidebar-widget">
                             <div class="author-box">
-                                <figure class="author-thumb"><img src="assets/images/resource/author-1.jpg"
-                                        alt=""></figure>
-                                <div class="inner">
-                                    <h4>Michael Bean</h4>
-                                    <ul class="info clearfix">
-                                        <li><i class="fas fa-map-marker-alt"></i>84 St. John Wood High Street,
-                                            St Johns Wood</li>
-                                        <li><i class="fas fa-phone"></i><a href="tel:03030571965">030 3057 1965</a></li>
-                                    </ul>
-                                    <div class="btn-box"><a href="agents-details.html">View Listing</a></div>
-                                </div>
+
+                                @if ($property->agent_id == null)
+                                    <figure class="author-thumb"><img src="{{ url('img/no-image.png') }}"
+                                            alt=""></figure>
+                                    <div class="inner">
+                                        <h4>SearchmanduAgent</h4>
+                                        <ul class="info clearfix">
+                                            <li><i class="fas fa-map-marker-alt"></i>Badegaun-14, Lalitpur</li>
+                                            <li><i class="fas fa-phone"></i><a href="tel:9803507666">9803507666</a>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box">No Listings</div>
+                                    </div>
+                                @else
+                                    <figure class="author-thumb"><img
+                                            src="{{ !empty($property->user->photo) ? url('upload/agent_images/' . $property->user->photo) : url('img/no_image.jpg') }}"
+                                            alt=""></figure>
+                                    <div class="inner">
+                                        <h4>{{ $property->user->name }}</h4>
+                                        <ul class="info clearfix">
+                                            <li><i class="fas fa-map-marker-alt"></i>{{ $property->user->address }}</li>
+                                            <li><i class="fas fa-phone"></i><a
+                                                    href="tel:{{ $property->user->phone }}">{{ $property->user->phone }}</a>
+                                            </li>
+                                        </ul>
+                                        <div class="btn-box"><a href="agents-details.html">View Listings</a></div>
+                                    </div>
+                                @endif
                             </div>
                             <div class="form-inner">
                                 <form action="property-details.html" method="post" class="default-form">
@@ -374,138 +396,70 @@
                     <h4>Similar Properties</h4>
                 </div>
                 <div class="row clearfix">
-                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms"
-                            data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-1.jpg" alt="">
-                                    </figure>
-                                    <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="author-info clearfix">
-                                        <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-1.jpg"
-                                                    alt=""></figure>
-                                            <h6>Michael Bean</h6>
-                                        </div>
-                                        <div class="buy-btn pull-right"><a href="property-details.html">For Buy</a></div>
+
+                    @foreach ($relatedProperty as $item)
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-one wow fadeInUp animated" data-wow-delay="00ms"
+                                data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="{{ asset($item->property_thumbnail) }}"
+                                                alt="">
+                                        </figure>
+                                        <div class="batch"><i class="icon-11"></i></div>
+                                        <span class="category">{{ $item->type->type_name }}</span>
                                     </div>
-                                    <div class="title-text">
-                                        <h4><a href="property-details.html">Villa on Grand Avenue</a></h4>
-                                    </div>
-                                    <div class="price-box clearfix">
-                                        <div class="price-info pull-left">
-                                            <h6>Start From</h6>
-                                            <h4>$30,000.00</h4>
+                                    <div class="lower-content">
+                                        <div class="author-info clearfix">
+                                            <div class="author pull-left">
+                                                @if ($item->agent_id == null)
+                                                    <figure class="author-thumb"><img src="{{ url('img/no_image.jpg') }}"
+                                                            alt="">
+                                                    </figure>
+                                                    <h6>AgentSearchmandu</h6>
+                                                @else
+                                                    <figure class="author-thumb"><img
+                                                            src="{{ !empty($item->user->photo) ? url('upload/agent_images/' . $item->user->photo) : url('img/no_image.jpg') }}"
+                                                            alt="">
+                                                    </figure>
+                                                    <h6>{{ $item->user->name }}</h6>
+                                                @endif
+                                            </div>
+                                            <div class="buy-btn pull-right"><a
+                                                    href="{{ url('property/details/' . $item->id . '/' . $item->property_slug) }}">{{ $item->property_status }}</a>
+                                            </div>
                                         </div>
-                                        <ul class="other-option pull-right clearfix">
-                                            <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                            <li><a href="property-details.html"><i class="icon-13"></i></a></li>
+                                        <div class="title-text">
+                                            <h4><a
+                                                    href="{{ url('property/details/' . $item->id . '/' . $item->property_slug) }}">{{ $item->property_name }}</a>
+                                            </h4>
+                                        </div>
+                                        <div class="price-box clearfix">
+                                            <div class="price-info pull-left">
+                                                <h6>Starting From</h6>
+                                                <h4>s.{{ $item->lowest_price }}</h4>
+                                            </div>
+                                            <ul class="other-option pull-right clearfix">
+                                                <li><a href="property-details.html"><i class="icon-12"></i></a></li>
+                                                <li><a href="property-details.html"><i class="icon-13"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p>{{ $item->short_descp }}</p>
+                                        <ul class="more-details clearfix">
+                                            <li><i class="icon-14"></i>{{ $item->bedrooms }} Beds</li>
+                                            <li><i class="icon-15"></i>{{ $item->bathrooms }} Baths</li>
+                                            <li><i class="icon-16"></i>{{ $item->property_size }} Sq.Ft</li>
                                         </ul>
+                                        <div class="btn-box"><a href="{{ url('property/details/' . $item->id . '/' . $item->property_slug) }}"
+                                                class="theme-btn btn-two">See Details</a></div>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                                    <ul class="more-details clearfix">
-                                        <li><i class="icon-14"></i>3 Beds</li>
-                                        <li><i class="icon-15"></i>2 Baths</li>
-                                        <li><i class="icon-16"></i>600 Sq Ft</li>
-                                    </ul>
-                                    <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See
-                                            Details</a></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="300ms"
-                            data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-2.jpg" alt="">
-                                    </figure>
-                                    <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="author-info clearfix">
-                                        <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-2.jpg"
-                                                    alt=""></figure>
-                                            <h6>Robert Niro</h6>
-                                        </div>
-                                        <div class="buy-btn pull-right"><a href="property-details.html">For Rent</a></div>
-                                    </div>
-                                    <div class="title-text">
-                                        <h4><a href="property-details.html">Contemporary Apartment</a></h4>
-                                    </div>
-                                    <div class="price-box clearfix">
-                                        <div class="price-info pull-left">
-                                            <h6>Start From</h6>
-                                            <h4>$45,000.00</h4>
-                                        </div>
-                                        <ul class="other-option pull-right clearfix">
-                                            <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                            <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                                    <ul class="more-details clearfix">
-                                        <li><i class="icon-14"></i>3 Beds</li>
-                                        <li><i class="icon-15"></i>2 Baths</li>
-                                        <li><i class="icon-16"></i>600 Sq Ft</li>
-                                    </ul>
-                                    <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See
-                                            Details</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                        <div class="feature-block-one wow fadeInUp animated" data-wow-delay="600ms"
-                            data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="image-box">
-                                    <figure class="image"><img src="assets/images/feature/feature-3.jpg" alt="">
-                                    </figure>
-                                    <div class="batch"><i class="icon-11"></i></div>
-                                    <span class="category">Featured</span>
-                                </div>
-                                <div class="lower-content">
-                                    <div class="author-info clearfix">
-                                        <div class="author pull-left">
-                                            <figure class="author-thumb"><img src="assets/images/feature/author-3.jpg"
-                                                    alt=""></figure>
-                                            <h6>Keira Mel</h6>
-                                        </div>
-                                        <div class="buy-btn pull-right"><a href="property-details.html">Sold Out</a></div>
-                                    </div>
-                                    <div class="title-text">
-                                        <h4><a href="property-details.html">Luxury Villa With Pool</a></h4>
-                                    </div>
-                                    <div class="price-box clearfix">
-                                        <div class="price-info pull-left">
-                                            <h6>Start From</h6>
-                                            <h4>$63,000.00</h4>
-                                        </div>
-                                        <ul class="other-option pull-right clearfix">
-                                            <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                                            <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>
-                                    <ul class="more-details clearfix">
-                                        <li><i class="icon-14"></i>3 Beds</li>
-                                        <li><i class="icon-15"></i>2 Baths</li>
-                                        <li><i class="icon-16"></i>600 Sq Ft</li>
-                                    </ul>
-                                    <div class="btn-box"><a href="property-details.html" class="theme-btn btn-two">See
-                                            Details</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
+
+
                 </div>
             </div>
         </div>
