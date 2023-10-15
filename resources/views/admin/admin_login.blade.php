@@ -94,8 +94,7 @@
                                                     Login
                                                 </button>
                                             </div>
-                                            <a href="register.html" class="d-block mt-3 text-muted">Not a user? Sign
-                                                up</a>
+                                            <a href="/" class="d-block mt-3 text-muted">Homepage</a>
                                         </form>
                                     </div>
                                 </div>

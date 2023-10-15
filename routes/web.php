@@ -30,6 +30,10 @@ use App\Http\Controllers\Agent\WishlistController;
 //     return view('welcome');
 // });
 
+Route::get('/current-time', function () {
+    return view('current-time');
+});
+
 //User Frontend All Routes
 Route::get('/', [UserController::class, 'Index']);
 

@@ -56,19 +56,15 @@
                 <div class="right-column pull-right clearfix">
                     <div class="price-inner clearfix">
                         <ul class="category clearfix pull-left">
-                            <li><a href="property-details.html">{{ $property->type->type_name }}</a></li>
-                            <li><a href="property-details.html">{{ $property->property_status }}</a></li>
+                            <li><a>{{ $property->type->type_name }}</a></li>
+                            <li><a>{{ $property->property_status }}</a></li>
                         </ul>
+                    </div>
+                    <div class="price-inner clearfix">
                         <div class="price-box pull-right">
                             <h3>Rs.{{ $property->lowest_price }}</h3>
                         </div>
                     </div>
-                    <ul class="other-option pull-right clearfix">
-                        <li><a href="property-details.html"><i class="icon-37"></i></a></li>
-                        <li><a href="property-details.html"><i class="icon-38"></i></a></li>
-                        <li><a href="property-details.html"><i class="icon-12"></i></a></li>
-                        <li><a href="property-details.html"><i class="icon-13"></i></a></li>
-                    </ul>
                 </div>
             </div>
             <div class="row clearfix">
@@ -127,20 +123,6 @@
                                 <li><span>Zip/Postal Code:</span> {{ $property->postal_code }}</li>
                                 <li><span>City:</span> {{ $property->city }}</li>
                             </ul>
-                            <div class="google-map-area">
-                                <div class="google-map" id="contact-google-map" data-map-lat="{{ $property->latitude }}"
-                                    data-map-lng="{{ $property->longtitude }}"
-                                    data-icon-path="{{ asset('frontend/assets/images/icons/map-marker.png') }}"
-                                    data-map-title="Brooklyn, New York, United Kingdom" data-map-zoom="12"
-                                    data-markers='{
-                                                "marker-1": [40.712776, -74.005974,
-                                                "<h4>Branch Office</h4>
-                                                <p>77/99 New York</p>",
-                                                "{{ asset('frontend/assets/images/icons/map-marker.png') }}"]
-                                            }'>
-
-                                </div>
-                            </div>
                         </div>
                         <div class="nearby-box content-widget">
                             <div class="title-box">
@@ -190,58 +172,6 @@
                                 </iframe>
                             </figure>
                         </div>
-                        <div class="schedule-box content-widget">
-                            <div class="title-box">
-                                <h4>Schedule A Tour</h4>
-                            </div>
-                            <div class="form-inner">
-                                <form action="property-details.html" method="post">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <i class="far fa-calendar-alt"></i>
-                                                <input type="text" name="date" placeholder="Tour Date"
-                                                    id="datepicker">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <i class="far fa-clock"></i>
-                                                <input type="text" name="time" placeholder="Any Time">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <input type="text" name="name" placeholder="Your Name"
-                                                    required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <input type="email" name="email" placeholder="Your Email"
-                                                    required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <input type="tel" name="phone" placeholder="Your Phone"
-                                                    required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 column">
-                                            <div class="form-group">
-                                                <textarea name="message" placeholder="Your message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 column">
-                                            <div class="form-group message-btn">
-                                                <button type="submit" class="theme-btn btn-one">Submit Now</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
@@ -273,7 +203,6 @@
                                                     href="tel:{{ $property->user->phone }}">{{ $property->user->phone }}</a>
                                             </li>
                                         </ul>
-                                        <div class="btn-box"><a href="agents-details.html">View Listings</a></div>
                                     </div>
                                 @endif
                             </div>
@@ -340,42 +269,6 @@
 
                             </div>
                         </div>
-                        <div class="calculator-widget sidebar-widget">
-                            <div class="calculate-inner">
-                                <div class="widget-title">
-                                    <h4>Mortgage Calculator</h4>
-                                </div>
-                                <form method="post" action="mortgage-calculator.html" class="default-form">
-                                    <div class="form-group">
-                                        <i class="fas fa-dollar-sign"></i>
-                                        <input type="number" name="total_amount" placeholder="Total Amount">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="fas fa-dollar-sign"></i>
-                                        <input type="number" name="down_payment" placeholder="Down Payment">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="fas fa-percent"></i>
-                                        <input type="number" name="interest_rate" placeholder="Interest Rate">
-                                    </div>
-                                    <div class="form-group">
-                                        <i class="far fa-calendar-alt"></i>
-                                        <input type="number" name="loan" placeholder="Loan Terms(Years)">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="select-box">
-                                            <select class="wide">
-                                                <option data-display="Monthly">Monthly</option>
-                                                <option value="1">Yearly</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group message-btn">
-                                        <button type="submit" class="theme-btn btn-one">Calculate Now</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -425,7 +318,7 @@
                                         <div class="price-box clearfix">
                                             <div class="price-info pull-left">
                                                 <h6>Starting From</h6>
-                                                <h4>s.{{ $item->lowest_price }}</h4>
+                                                <h4>Rs.{{ $item->lowest_price }}</h4>
                                             </div>
                                             <ul class="other-option pull-right clearfix">
                                                 <li><a href="property-details.html"><i class="icon-12"></i></a></li>

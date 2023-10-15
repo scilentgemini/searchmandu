@@ -5,7 +5,7 @@
             <div class="left-column pull-left">
                 <ul class="info clearfix">
                     <li><i class="far fa-map-marker-alt"></i>Badegaun - 14, Lalitpur</li>
-                    <li><i class="far fa-clock"></i>Mon - Sat 9.00 - 18.00</li>
+                    <li><i class="far fa-clock"></i> @include('_current-time')</li>
                     <li><i class="far fa-phone"></i><a href="tel:9803507666">+977-9803507666</a></li>
                 </ul>
             </div>
@@ -60,14 +60,11 @@
                                         <li><a href="{{ route('buy.property') }}"><span>Property Buy List</span></a></li>
                                     </ul>
                                 </li>
-                                <li><a href="/"><span>Contact</span></a></li>
 
                                 @auth
                                     <li><a href="{{ route('dashboard') }}"><span>Dashboard</span></a></li>
                                 @else
-                                    <li>
-                                        <a href="{{ route('login') }}"><i class="fas fa-user"></i>Login</a>
-                                    </li>
+                                    
                                 @endauth
                             </ul>
                         </div>

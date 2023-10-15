@@ -37,7 +37,7 @@
 
 
 <!-- places-section -->
-@include('frontend.home.places')
+{{-- @include('frontend.home.places') --}}
 <!-- places-section end -->
 
 

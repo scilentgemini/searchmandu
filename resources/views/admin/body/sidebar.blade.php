@@ -22,8 +22,8 @@
             <li class="nav-item nav-category">RealEstate</li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#pType" role="button"
-                    aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="mail"></i>
+                    aria-expanded="false" aria-controls="pType">
+                    <i class="link-icon" data-feather="align-left"></i>
                     <span class="link-title">Property Type</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
@@ -38,30 +38,10 @@
                     </ul>
                 </div>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#state" role="button"
-                    aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="mail"></i>
-                    <span class="link-title">Property State</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                </a>
-                <div class="collapse" id="state">
-                    <ul class="nav sub-menu">
-                        <li class="nav-item">
-                            <a href="{{ route('all.state') }}" class="nav-link">All States</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('add.type') }}" class="nav-link">Add State</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#amenitie" role="button"
-                    aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="mail"></i>
+                    aria-expanded="false" aria-controls="amenitie">
+                    <i class="link-icon" data-feather="aperture"></i>
                     <span class="link-title">Amenities</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
@@ -79,8 +59,8 @@
 
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#property" role="button"
-                    aria-expanded="false" aria-controls="emails">
-                    <i class="link-icon" data-feather="mail"></i>
+                    aria-expanded="false" aria-controls="property">
+                    <i class="link-icon" data-feather="home"></i>
                     <span class="link-title">Properties</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                 </a>
@@ -99,12 +79,6 @@
                 <a href="{{ route('admin.property.message') }}" class="nav-link">
                     <i class="link-icon" data-feather="mail"></i>
                     <span class="link-title">Messages</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/" class="nav-link">
-                    <i class="link-icon" data-feather="calendar"></i>
-                    <span class="link-title">Calendar</span>
                 </a>
             </li>
 

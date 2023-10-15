@@ -21,8 +21,6 @@
                     </li>
                 @endforeach
             </ul>
-            <div class="more-btn"><a href="/" class="theme-btn btn-one">All Categories</a>
-            </div>
         </div>
     </div>
 </section>
