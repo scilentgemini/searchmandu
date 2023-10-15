@@ -173,13 +173,7 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
 
  // State  All Route 
  Route::controller(StateController::class)->group(function(){
-
     Route::get('/all/state', 'AllState')->name('all.state'); 
-    Route::get('/add/type', 'AddType')->name('add.type');
-    Route::post('/store/type', 'StoreType')->name('store.type'); 
-    Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
-    Route::post('/update/type', 'UpdateType')->name('update.type');
-    Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
 
 });
 
@@ -204,3 +198,7 @@ Route::post('/agent/details/message', [IndexController::class, 'AgentDetailsMess
 
 //agent details view
 Route::get('/agent/details/{id}', [IndexController::class, 'AgentDetails'])->name('agent.details');
+
+//buy search option homepage
+Route::post('/buy/property/search', [IndexController::class, 'BuyPropertySeach'])->name('buy.property.search');
+Route::post('/rent/property/search', [IndexController::class, 'RentPropertySeach'])->name('rent.property.search');

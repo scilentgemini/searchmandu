@@ -72,10 +72,10 @@ class AgentPropertyController extends Controller
     //     $pcode = IdGenerator::generate(['table' => 'properties','field' => 'property_code','length' => 5, 'prefix' => 'PC' ]);
 
 
-    //     $image = $request->file('property_thambnail');
+    //     $image = $request->file('property_thumbnail');
     //     $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
-    //     Image::make($image)->resize(370,250)->save('upload/property/thambnail/'.$name_gen);
-    //     $save_url = 'upload/property/thambnail/'.$name_gen;
+    //     Image::make($image)->resize(370,250)->save('upload/property/thumbnail/'.$name_gen);
+    //     $save_url = 'upload/property/thumbnail/'.$name_gen;
 
     //     $property_id = Property::insertGetId([
 
@@ -109,7 +109,7 @@ class AgentPropertyController extends Controller
     //         'hot' => $request->hot,
     //         'agent_id' => Auth::user()->id,
     //         'status' => 1,
-    //         'property_thambnail' => $save_url,
+    //         'property_thumbnail' => $save_url,
     //         'created_at' => Carbon::now(), 
     //     ]);
 

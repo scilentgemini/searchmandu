@@ -17,29 +17,21 @@
                         </div>
                         <div class="wrapper list">
                             <div class="deals-list-content list-item">
-
-
-
                                 @foreach ($property as $item)
                                     <div class="deals-block-one">
                                         <div class="inner-box">
                                             <div class="image-box">
-                                                <figure class="image"
-                                                style="width: 300px;
-                                                            height: 350px;
-                                                            overflow: hidden;"><img src="{{ asset($item->property_thumbnail) }}"
-                                                        alt=""
-                                                        style="width: 100%;
-                                                                height: 100%;
-                                                                object-fit: cover;"></figure>
+                                                <figure class="image">
+                                                            <img src="{{ asset($item->property_thumbnail) }}"
+                                                        alt="" style="width: 300px;
+                                                        height: 350px;">
+                                                        </figure>
                                                 <div class="batch"><i class="icon-11"></i></div>
                                                 @if ($item->featured == 1)
                                                     <span class="category">Featured</span>
                                                 @else
                                                     <span class="category">New</span>
                                                 @endif
-
-
                                                 <div class="buy-btn"><a href="property-details.html">For
                                                         {{ $item->property_status }}</a></div>
                                             </div>
@@ -84,14 +76,13 @@
                                                             class="theme-btn btn-two">See Details</a></div>
                                                     <ul class="other-option pull-right clearfix">
                                                         <li><a aria-label="Compare" class="action-btn"
-                                                                id="{{ $item->id }}"
-                                                                onclick="addToCompare(this.id)"><i
+                                                                id="{{ $item->id }}" onclick="addToCompare(this.id)"><i
                                                                     class="icon-12"></i></a></li>
 
                                                         <li><a aria-label="Add To Wishlist" class="action-btn"
                                                                 id="{{ $item->id }}"
-                                                                onclick="addToWishList(this.id)"><i
-                                                                    class="icon-13"></i></a></li>
+                                                                onclick="addToWishList(this.id)"><i class="icon-13"></i></a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>
