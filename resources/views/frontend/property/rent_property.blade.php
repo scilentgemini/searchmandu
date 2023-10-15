@@ -97,7 +97,7 @@
                     <div class="property-content-side">
                         <div class="item-shorting clearfix">
                             <div class="left-column pull-left">
-                                <h5>Search Reasults: <span>Showing {{ count($property) }} Listings</span></h5>
+                                <h5>Search Results: <span>Showing {{ count($property) }} Listings</span></h5>
                             </div>
                             <div class="right-column pull-right clearfix">
 

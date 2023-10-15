@@ -22,7 +22,7 @@
 
 
 <!-- deals-section -->
-{{-- @include('frontend.home.deals') --}}
+@include('frontend.home.deals')
 <!-- deals-section end -->
 
 
@@ -32,12 +32,12 @@
 
 
 <!-- chooseus-section -->
-@include('frontend.home.choose_us')
+{{-- @include('frontend.home.choose_us') --}}
 <!-- chooseus-section end -->
 
 
 <!-- places-section -->
-{{-- @include('frontend.home.places') --}}
+@include('frontend.home.places')
 <!-- places-section end -->
 
 

@@ -156,7 +156,7 @@ class IndexController extends Controller
 
         return view('frontend.property.property_type',compact('property','pbread'));
 
-    }// End Method 
+    }// End Method
 
 
     public function StateDetails($id){

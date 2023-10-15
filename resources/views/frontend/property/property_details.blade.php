@@ -116,61 +116,6 @@
                                 @endforeach
                             </ul>
                         </div>
-                        {{-- <div class="floorplan-inner content-widget">
-                            <div class="title-box">
-                                <h4>Floor Plan</h4>
-                            </div>
-                            <ul class="accordion-box">
-                                <li class="accordion block active-block">
-                                    <div class="acc-btn active">
-                                        <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                        <h5>First Floor</h5>
-                                    </div>
-                                    <div class="acc-content current">
-                                        <div class="content-box">
-                                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-                                                deserunt mollit anim est laborum. Sed perspiciatis unde omnis iste natus
-                                                error sit voluptatem accusa dolore mque laudant.</p>
-                                            <figure class="image-box">
-                                                <img src="assets/images/resource/floor-1.png" alt="">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="accordion block">
-                                    <div class="acc-btn">
-                                        <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                        <h5>Second Floor</h5>
-                                    </div>
-                                    <div class="acc-content">
-                                        <div class="content-box">
-                                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-                                                deserunt mollit anim est laborum. Sed perspiciatis unde omnis iste natus
-                                                error sit voluptatem accusa dolore mque laudant.</p>
-                                            <figure class="image-box">
-                                                <img src="assets/images/resource/floor-1.png" alt="">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="accordion block">
-                                    <div class="acc-btn">
-                                        <div class="icon-outer"><i class="fas fa-angle-down"></i></div>
-                                        <h5>Third Floor</h5>
-                                    </div>
-                                    <div class="acc-content">
-                                        <div class="content-box">
-                                            <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia
-                                                deserunt mollit anim est laborum. Sed perspiciatis unde omnis iste natus
-                                                error sit voluptatem accusa dolore mque laudant.</p>
-                                            <figure class="image-box">
-                                                <img src="assets/images/resource/floor-1.png" alt="">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> --}}
                         <div class="location-box content-widget">
                             <div class="title-box">
                                 <h4>Location</h4>

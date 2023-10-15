@@ -170,7 +170,7 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
 //display rent, buy and property types
 Route::get('rent/property', [IndexController::class, 'RentProperty'])-> name('rent.property');
 Route::get('buy/property', [IndexController::class, 'BuyProperty'])-> name('buy.property');
-Route::get('property/type', [IndexController::class, 'PropertyType'])-> name('property.type');
+Route::get('property/type/{id}', [IndexController::class, 'PropertyType'])-> name('property.type');
 
 
 

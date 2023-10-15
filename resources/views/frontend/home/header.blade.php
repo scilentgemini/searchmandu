@@ -10,13 +10,13 @@
                 </ul>
             </div>
             <div class="right-column pull-right">
-                <ul class="social-links clearfix">
+                {{-- <ul class="social-links clearfix">
                     <li><a href="/"><i class="fab fa-facebook-f"></i></a></li>
                     <li><a href="/"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="/"><i class="fab fa-pinterest-p"></i></a></li>
                     <li><a href="/"><i class="fab fa-google-plus-g"></i></a></li>
                     <li><a href="/"><i class="fab fa-vimeo-v"></i></a></li>
-                </ul>
+                </ul> --}}
 
                 @auth
                     <div class="sign-box">
@@ -52,7 +52,7 @@
                     <nav class="main-menu navbar-expand-md navbar-light">
                         <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                             <ul class="navigation clearfix">
-                                <li><a href="/"><span>Home</span></a>
+                                <li><a href="{{ url('/') }}"><span>Home</span></a>
                                 </li>
                                 <li class="dropdown"><a href="/"><span>Properties</span></a>
                                     <ul>
@@ -60,15 +60,7 @@
                                         <li><a href="{{ route('buy.property') }}"><span>Property Buy List</span></a></li>
                                     </ul>
                                 </li>
-                                <li class=" "><a href="index.html"><span>Blog</span></a>
-                                    <ul>
-                                        <li><a href="blog-1.html">Blog 01</a></li>
-                                        <li><a href="blog-2.html">Blog 02</a></li>
-                                        <li><a href="blog-3.html">Blog 03</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html"><span>Contact</span></a></li>
+                                <li><a href="/"><span>Contact</span></a></li>
 
                                 @auth
                                     <li><a href="{{ route('dashboard') }}"><span>Dashboard</span></a></li>
@@ -80,9 +72,6 @@
                             </ul>
                         </div>
                     </nav>
-                </div>
-                <div class="btn-box">
-                    <a href="index.html" class="theme-btn btn-one"><span>+</span>Add Listing</a>
                 </div>
             </div>
         </div>
@@ -100,9 +89,6 @@
                     <nav class="main-menu clearfix">
                         <!--Keep This Empty / Menu will come through Javascript-->
                     </nav>
-                </div>
-                <div class="btn-box">
-                    <a href="/" class="theme-btn btn-one"><span>+</span>Add Listing</a>
                 </div>
             </div>
         </div>
