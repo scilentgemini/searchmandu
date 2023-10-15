@@ -6,6 +6,7 @@
         ->get();
 @endphp
 
+
 <section class="team-section sec-pad centred bg-color-1">
     <div class="pattern-layer" style="background-image: url({{ asset('frontend/assets/images/shape/shape-1.png') }});">
     </div>
@@ -18,12 +19,12 @@
             @foreach ($agents as $item)
                 <div class="team-block-one">
                     <div class="inner-box">
-                        <figure class="image-box"><img src="{{ !empty($item->photo) ? url('upload/agent_images/' . $item->photo) : url('img/no_image.jpg') }}"
-                                alt="" style="width: 370px; height: 370px;">
-                        </figure>
+                        <figure class="image-box"><img
+                                src="{{ !empty($item->photo) ? url('upload/agent_images/' . $item->photo) : url('upload/no_image.jpg') }}"
+                                alt="" style="width:370px; height:370px;"></figure>
                         <div class="lower-content">
                             <div class="inner">
-                                <h4><a href="agents-details.html">{{ $item->name }}</a></h4>
+                                <h4><a href="{{ route('agent.details',$item->id) }}">{{ $item->name }}</a></h4>
                                 <span class="designation">{{ $item->email }}</span>
                                 {{-- <ul class="social-links clearfix">
                                     <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
@@ -36,6 +37,5 @@
                 </div>
             @endforeach
         </div>
-    </div>
     </div>
 </section>

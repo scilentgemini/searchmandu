@@ -77,12 +77,10 @@
                                     <!-- email list item -->
                                     @foreach ($usermsg as $msg)
                                         <div class="email-list-item">
-                                            <a href="{{ route('agent.message.details', $msg->id) }}" class="email-list-detail">
+                                            <a href="{{ route('agent.message.details',$msg->id) }}" class="email-list-detail">
                                                 <div class="content">
-                                                    <span class="from">{{ $msg['user']['name'] }}</span>
-                                                    <p class="msg">
-                                                        {{ $msg->message }}
-                                                    </p>
+                                                  <span class="from">{{ $msg['user']['name'] }}</span>
+                                                  <p class="msg"> {{ $msg->message }} </p>
                                                 </div>
                                                 <span class="date">
                                                     <span class="icon"><i data-feather="paperclip"></i> </span>

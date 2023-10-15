@@ -178,3 +178,9 @@ Route::post('/add-to-wishList/{property_id}', [WishlistController::class, 'AddTo
 
 //message sending route(from property detail page)
 Route::post('/property/message', [IndexController::class, 'PropertyMessage'])->name('property.message');
+
+//message sending route(from agent detail page)
+Route::post('/agent/details/message', [IndexController::class, 'AgentDetailsMessage'])->name('agent.details.message');
+
+//agent details view
+Route::get('/agent/details/{id}', [IndexController::class, 'AgentDetails'])->name('agent.details');
