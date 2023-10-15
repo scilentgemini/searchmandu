@@ -6,6 +6,7 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\PropertyController;
+use App\Http\Controllers\Backend\StateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Frontend\IndexController;
@@ -56,6 +57,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::post('admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
     Route::post('admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
 });
+
+
 
 Route::get('admin/login', [AdminController::class, 'AdminLogin'])->name('admin.login')->middleware(RedirectIfAuthenticated::class);
 
@@ -166,6 +169,20 @@ Route::middleware(['auth', 'role:agent'])->group(function () {
         Route::get('agent/message/details/{id}', 'AgentMessageDetails')->name('agent.message.details');
     });
 });
+
+
+ // State  All Route 
+ Route::controller(StateController::class)->group(function(){
+
+    Route::get('/all/state', 'AllState')->name('all.state'); 
+    Route::get('/add/type', 'AddType')->name('add.type');
+    Route::post('/store/type', 'StoreType')->name('store.type'); 
+    Route::get('/edit/type/{id}', 'EditType')->name('edit.type');
+    Route::post('/update/type', 'UpdateType')->name('update.type');
+    Route::get('/delete/type/{id}', 'DeleteType')->name('delete.type');  
+
+});
+
 
 //display rent, buy and property types
 Route::get('rent/property', [IndexController::class, 'RentProperty'])-> name('rent.property');
