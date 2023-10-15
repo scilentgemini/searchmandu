@@ -83,7 +83,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="pages/apps/calendar.html" class="nav-link">
+                <a href="/" class="nav-link">
                     <i class="link-icon" data-feather="calendar"></i>
                     <span class="link-title">Calendar</span>
                 </a>
@@ -109,7 +109,7 @@
                 </div>
             </li>
             
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button"
                     aria-expanded="false" aria-controls="advancedUI">
                     <i class="link-icon" data-feather="anchor"></i>
@@ -126,7 +126,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
         </ul>
     </div>
 </nav>

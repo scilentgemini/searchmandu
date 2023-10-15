@@ -131,28 +131,27 @@
                             <div class="widget-title">
                                 <h5>Contact {{ $agent->name }}</h5>
                             </div>
+                            
                             <div class="form-inner">
+
                                 @auth
 
-                                    @php
-                                        $id = Auth::user()->id;
-                                        $userData = App\Models\User::find($id);
-                                    @endphp
+                                @php
+                                    $id = Auth::user()->id;
+                                    $userData = App\Models\User::find($id);
+                                @endphp
 
                                     <form action="{{ route('agent.details.message') }}" method="post" class="default-form">
                                         @csrf
-                                        <input type="hidden" name="agent_id" value="{{ $agent->id }}">
+                                            <input type="hidden" name="agent_id" value="{{ $agent->id }}">
                                         <div class="form-group">
-                                            <input type="text" name="msg_name" placeholder="Your name"
-                                                value="{{ $userData->name }}">
+                                            <input type="text" name="msg_name" placeholder="Your name" value="{{ $userData->name }}">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="msg_email" placeholder="Your Email"
-                                                value="{{ $userData->email }}">
+                                            <input type="email" name="msg_email" placeholder="Your Email" value="{{ $userData->email }}">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="msg_phone" placeholder="Phone"
-                                                value="{{ $userData->phone }}">
+                                            <input type="text" name="msg_phone" placeholder="Phone" value="{{ $userData->phone }}">
                                         </div>
                                         <div class="form-group">
                                             <textarea name="message" placeholder="Message"></textarea>
@@ -164,7 +163,7 @@
                                 @else
                                     <form action="{{ route('agent.details.message') }}" method="post" class="default-form">
                                         @csrf
-                                        <input type="hidden" name="agent_id" value="{{ $agent->id }}">
+                                            <input type="hidden" name="agent_id" value="{{ $agent->id }}">
                                         <div class="form-group">
                                             <input type="text" name="msg_name" placeholder="Your name" required="">
                                         </div>
@@ -182,6 +181,8 @@
                                         </div>
                                     </form>
                                 @endauth
+
+
                             </div>
                         </div>
                         <div class="category-widget sidebar-widget">
@@ -189,8 +190,8 @@
                                 <h5>Status Of Property</h5>
                             </div>
                             <ul class="category-list clearfix">
-                                <li><a href="agents-details.html">For Rent <span>(200)</span></a></li>
-                                <li><a href="agents-details.html">For Sale <span>(700)</span></a></li>
+                                <li><a href="{{ route('rent.property') }}">To Rent <span>({{ count($rentproperty) }})</span></a></li>
+                                <li><a href="{{ route('buy.property') }}">To Buy <span>({{ count($buyproperty) }})</span></a></li>
                             </ul>
                         </div>
                         <div class="featured-widget sidebar-widget">

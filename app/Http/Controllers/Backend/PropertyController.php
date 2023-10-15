@@ -463,7 +463,7 @@ class PropertyController extends Controller
     // }// End Method 
 
 
-     public function AdminPropertyMessage(){
+    public function AdminPropertyMessage(){
 
         $usermsg = PropertyMessage::latest()->get();
         return view('backend.message.all_message',compact('usermsg'));

@@ -9,9 +9,9 @@
         <div class="contact-info">
             <h4>Contact Info</h4>
             <ul>
-                <li>Chicago 12, Melborne City, USA</li>
-                <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                <li><a href="mailto:info@example.com">info@example.com</a></li>
+                <li>Badegaun - 14, Lalitpur</li>
+                <li><a href="tel:+9803507666">+977-9803507666</a></li>
+                <li><a href="mailto:chitthi@searchmandu.com">chitthi@searchmandu.com</a></li>
             </ul>
         </div>
         <div class="social-links">

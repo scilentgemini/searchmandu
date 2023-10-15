@@ -84,11 +84,10 @@ class IndexController extends Controller
         $agent = User::findOrFail($id);
         $property = Property::where('agent_id',$id)->get();
         $featured = Property::where('featured','1')->limit(3)->get();
-        // $rentproperty = Property::where('property_status','rent')->get();
-        // $buyproperty = Property::where('property_status','buy')->get();
+        $rentproperty = Property::where('property_status','rent')->get();
+        $buyproperty = Property::where('property_status','buy')->get();
 
-
-        return view('frontend.agent.agent_details',compact('agent','property','featured'//,'rentproperty','buyproperty'
+        return view('frontend.agent.agent_details',compact('agent','property','featured','rentproperty','buyproperty'
     ));
 
     }// End Method 
@@ -108,18 +107,15 @@ class IndexController extends Controller
             'msg_email' => $request->msg_email,
             'msg_phone' => $request->msg_phone,
             'message' => $request->message,
-            'created_at' => Carbon::now(), 
-
+            'created_at' => Carbon::now(),
         ]);
 
         $notification = array(
-            'message' => 'Send Message Successfully',
+            'message' => 'Message Sent Successfully',
             'alert-type' => 'success'
         );
 
         return redirect()->back()->with($notification);
-
-
 
         }else{
 

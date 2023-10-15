@@ -14,7 +14,8 @@ use Intervention\Image\Facades\Image;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-use DB;
+//use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\PackagePlan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\PropertyMessage;
@@ -641,7 +642,7 @@ class AgentPropertyController extends Controller
         $msgdetails = PropertyMessage::findOrFail($id);
         return view('agent.message.message_details',compact('usermsg','msgdetails'));
 
-    }// End Method  
+    }// End Method 
 
 
     public function AgentScheduleRequest(){

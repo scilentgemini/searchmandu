@@ -14,12 +14,12 @@
                                         <span class="icon"><i data-feather="chevron-down"></i></span>
                                     </button>
                                     <div class="order-first">
-                                        <h4>Mail Service</h4>
+                                        <h4>Messages</h4>
                                         <p class="text-muted">chitthi@searchmandu.com</p>
                                     </div>
                                 </div>
                                 <div class="d-grid my-3">
-                                    <a class="btn btn-primary" href="./compose.html">Compose Email</a>
+                                    <a class="btn btn-primary" href="/">Compose</a>
                                 </div>
                                 <div class="email-aside-nav collapse">
                                     <ul class="nav flex-column">
@@ -28,27 +28,6 @@
                                                 <i data-feather="inbox" class="icon-lg me-2"></i>
                                                 Inbox
                                                 <span class="badge bg-danger fw-bolder ms-auto">{{ count($usermsg) }}</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <p class="text-muted tx-12 fw-bolder text-uppercase mb-2 mt-4">Labels</p>
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link d-flex align-items-center" href="#">
-                                                <i data-feather="tag" class="text-warning icon-lg me-2"></i>
-                                                Important
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link d-flex align-items-center" href="#">
-                                                <i data-feather="tag" class="text-primary icon-lg me-2"></i>
-                                                Business
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link d-flex align-items-center" href="#">
-                                                <i data-feather="tag" class="text-info icon-lg me-2"></i>
-                                                Inspiration
                                             </a>
                                         </li>
                                     </ul>
@@ -62,13 +41,6 @@
                                                 <i data-feather="inbox" class="text-muted me-2"></i>
                                                 <h4 class="me-1">Inbox</h4>
                                                 <span class="text-muted">({{ count($usermsg) }})</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="input-group">
-                                                <input class="form-control" type="text" placeholder="Search mail...">
-                                                <button class="btn btn-light btn-icon" type="button"
-                                                    id="button-search-addon"><i data-feather="search"></i></button>
                                             </div>
                                         </div>
                                     </div>
