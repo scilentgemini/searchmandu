@@ -17,6 +17,7 @@ use App\Models\PackagePlan;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\PropertyMessage;
 use App\Models\State;
+use Illuminate\Support\Facades\Auth;
 
 class PropertyController extends Controller
 {
@@ -462,12 +463,22 @@ class PropertyController extends Controller
     // }// End Method 
 
 
-    //  public function AdminPropertyMessage(){
+     public function AdminPropertyMessage(){
 
-    //     $usermsg = PropertyMessage::latest()->get();
-    //     return view('backend.message.all_message',compact('usermsg'));
+        $usermsg = PropertyMessage::latest()->get();
+        return view('backend.message.all_message',compact('usermsg'));
 
-    // }// End Method  
+    }// End Method  
+
+    public function AdminMessageDetails($id){
+
+        $uid = Auth::user()->id;
+        $usermsg = PropertyMessage::where('agent_id',$uid)->get();
+
+        $msgdetails = PropertyMessage::findOrFail($id);
+        return view('backend.message.message_details',compact('usermsg','msgdetails'));
+
+    }// End Method  
 
 
 }

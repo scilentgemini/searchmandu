@@ -30,11 +30,11 @@ class WishlistController extends Controller
                 ]);
                 return response()->json(['success' => 'Successfully Added On Your Wishlist']);
             }else{
-                return response()->json(['error' => 'This Property Has Already in your WishList']);
+                return response()->json(['error' => 'This Property Is Already In Your WishList']);
             }
 
         }else{
-            return response()->json(['error' => 'At First Login Your Account']);
+            return response()->json(['error' => 'Please Login First']);
         }
 
 

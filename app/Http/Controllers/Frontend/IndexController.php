@@ -58,7 +58,7 @@ class IndexController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'Send Message Successfully',
+            'message' => 'Message Sent Successfully',
             'alert-type' => 'success'
         );
 

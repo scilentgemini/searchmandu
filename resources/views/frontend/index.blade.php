@@ -17,17 +17,17 @@
 
 
 <!-- video-section -->
-@include('frontend.home.video')
+{{-- @include('frontend.home.video') --}}
 <!-- video-section end -->
 
 
 <!-- deals-section -->
-@include('frontend.home.deals')
+{{-- @include('frontend.home.deals') --}}
 <!-- deals-section end -->
 
 
 <!-- testimonial-section end -->
-@include('frontend.home.testimonial')
+{{-- @include('frontend.home.testimonial') --}}
 <!-- testimonial-section end -->
 
 
@@ -37,7 +37,7 @@
 
 
 <!-- places-section -->
-@include('frontend.home.places')
+{{-- @include('frontend.home.places') --}}
 <!-- places-section end -->
 
 
@@ -47,17 +47,17 @@
 
 
 <!-- cta-section -->
-@include('frontend.home.cta')
+{{-- @include('frontend.home.cta') --}}
 <!-- cta-section end -->
 
 
 <!-- news-section -->
-@include('frontend.home.news')
+{{-- @include('frontend.home.news') --}}
 <!-- news-section end -->
 
 
 <!-- download-section -->
-@include('frontend.home.download')
+{{-- @include('frontend.home.download') --}}
 <!-- download-section end -->
 
 @endsection

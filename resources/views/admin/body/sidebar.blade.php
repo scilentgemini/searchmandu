@@ -76,7 +76,12 @@
                     </ul>
                 </div>
             </li>
-
+            <li class="nav-item">
+                <a href="{{ route('admin.property.message') }}" class="nav-link">
+                    <i class="link-icon" data-feather="mail"></i>
+                    <span class="link-title">Messages</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="pages/apps/calendar.html" class="nav-link">
                     <i class="link-icon" data-feather="calendar"></i>
@@ -103,6 +108,7 @@
                     </ul>
                 </div>
             </li>
+            
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button"
                     aria-expanded="false" aria-controls="advancedUI">
