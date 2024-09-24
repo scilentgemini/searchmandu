@@ -2,11 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
-use DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
@@ -16,17 +14,17 @@ class UsersTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            //admin
+            // Admin
             [
-                'name' => 'Bibek Lama',
+                'name' => 'Dilu Lama',
                 'username' => 'admin',
-                'email' => 'admin@gmail.com',
+                'email' => 'admin@mauveine.tech',
                 'password' => Hash::make('malaiktha1290'),
                 'role' => 'admin',
                 'status' => 'active',
             ],
 
-            //Agent
+            // Agent
             [
                 'name' => 'Agent',
                 'username' => 'agent',
@@ -36,7 +34,7 @@ class UsersTableSeeder extends Seeder
                 'status' => 'active',
             ],
 
-            //User
+            // User
             [
                 'name' => 'User',
                 'username' => 'user',
